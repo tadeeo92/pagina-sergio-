@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> <link rel="stylesheet" href="estilo css pagian.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hojaestilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Garamond&family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Metodología de las 5S</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e6f7ff; /* Color de fondo */
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 15px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        nav ul li:hover {
+            color: #ffcc00;
+        }
+        h1 {
+            font-family: 'Garamond', serif;
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out, bounce 2s infinite; /* Animaciones para el título */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        h3, h4 {
+            font-family: 'Garamond', serif; /* Cambiar fuente a Garamond */
+            text-align: center;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+            opacity: 0;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+        h4 {
+            animation-delay: 1s;
+        }
+        p {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.5;
+            text-align: center;
+            color: #555;
+            animation: fadeIn 1s ease-in-out;
+        }
+        table {
+            width: 100%;
+            max-width: 600px; /* Ancho máximo para pantallas grandes */
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white; /* Fondo blanco para la tabla */
+            overflow-x: auto; /* Agrega desplazamiento horizontal en pantallas pequeñas */
+        }
+        th, td {
+            padding: 5px; /* Reducir padding para optimizar espacio */
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 0.9em; /* Tamaño de fuente reducido */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        th:hover, td:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            font-weight: bold;
+            border-top: 4px solid #ffcc00;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .image-container {
+            transition: transform 0.3s;
+            width: 80px; /* Ajustar ancho de las imágenes */
+            height: auto; /* Mantener proporciones */
+        }
+        .image-container img {
+            width: 100%; /* Imagen ajustada al contenedor */
+            height: auto; /* Mantener proporciones */
+        }
+        .image-container:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Media Queries */
+        @media (max-width: 800px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            h1, h3, h4 {
+                font-size: 1.5em;
+            }
+            table {
+                font-size: 0.8em; /* Ajustar tamaño de fuente en pantallas pequeñas */
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            footer {
+                font-size: 0.8em;
+            }
+            th, td {
+                font-size: 0.7em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+                padding: 3px; /* Reducir padding aún más para optimizar espacio */
+            }
+        }
+    </style>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li onclick="scrollToSection('inicio')">INICIO</li>
+            <li onclick="scrollToSection('metodologia')">Aprende más</li>
+            <li onclick="scrollToSection('beneficios')">Beneficios</li>
+            <li onclick="scrollToSection('historia')">Historia</li>
+            <li onclick="scrollToSection('info')">Info</li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <h1 class="fade-in" id="inicio">¿Qué es la Metodología de las 5S?</h1>
+    <p class="fade-in" style="animation-delay: 1.5s;">La metodología de las 5S es una técnica japonesa utilizada principalmente en la gestión de calidad y la mejora continua en entornos laborales.</p>
+    
+    <div class="fade-in" id="metodologia">
+        <h3>Metodología de las 5S</h3>
+        <h4>El nombre 5S proviene de 5 palabras japonesas</h4>
+        <table>
+            <tr>
+                <th style="background-color: pink;">Seiri (clasificar)</th>
+                <th style="background-color: aqua;">Seiton (Ordenar)</th>
+                <th style="background-color: orange;">Seiso (Limpiar)</th>
+                <th style="background-color: greenyellow;">Seiketsu (Estandarizar)</th>
+                <th style="background-color: green;">Shitsuke (Sostener)</th>
+            </tr>
+            <tr>
+                <td>Separar lo necesario.</td>
+                <td>Organizar elementos necesarios.</td>
+                <td>Mantener el área limpia.</td>
+                <td>Crear normas estandarizadas.</td>
+                <td>Fomentar la disciplina.</td>
+            </tr>
+        </table>
+    </div>
+
+    <h4 class="fade-in" id="beneficios">¿CUÁLES SON LOS BENEFICIOS?</h4>
+    <p class="fade-in" style="animation-delay: 1.5s;">La implementación de las 5S puede traer numerosos beneficios a una organización, tales como:</p>
+    <ul class="fade-in">
+        <li>Mejora en la eficiencia operativa.</li>
+        <li>Reducción de desperdicios y costos.</li>
+        <li>Aumento de la moral del personal.</li>
+        <li>Mejora en la seguridad laboral.</li>
+        <li>Un entorno de trabajo más agradable.</li>
+    </ul>
+
+    <h4 class="fade-in" id="historia">¿CUÁL ES LA HISTORIA DE LAS 5S?</h4>
+    <p class="fade-in" style="animation-delay: 1.5s;">La metodología de las 5S se originó en Japón durante la década de 1950, en un contexto de reconstrucción postguerra. Fue adoptada por Toyota como parte de su sistema de producción para mejorar la eficiencia y la calidad.</p>
+    <p class="fade-in" style="animation-delay: 2s;">A lo largo de los años, las 5S se han convertido en una práctica común en muchas empresas alrededor del mundo, mejorando el orden y la limpieza en los lugares de trabajo.</p>
+
+    <h4 class="fade-in" id="info">¿CÓMO SE IMPLEMENTA?</h4>
+    <table style="background-color: white;">
+        <tr>
+            <th>Compromiso de la dirección</th>
+            <th>Formación</th>
+            <th>Evaluación inicial</th>
+            <th>Implementación</th>
+            <th>Monitoreo</th>
+            <th>Reconocimiento</th>
+        </tr>
+        <tr>
+            <td class="image-container">Apoyo y promoción <br><img src="https://cdn-icons-png.flaticon.com/512/3209/3209737.png" alt="Compromiso"></td>
+            <td class="image-container">Capacitar a los empleados <br><img src="https://i.pinimg.com/originals/a1/9c/d4/a19cd40cc1e961ad46e9c8bc15679126.jpg" alt="Formación"></td>
+            <td class="image-container">Analizar el espacio <br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt9ivXvMcZvPvcAB9HBBqYSvH6yS-h0O5MMQ&s" alt="Evaluación inicial"></td>
+            <td class="image-container"><img src="https://i.pinimg.com/236x/bd/b0/7e/bdb07ed095a23867ea13b11f2fae819f.jpg" alt="Implementación"></td>
+            <td class="image-container">Revisar regularmente <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZIaOlJ1-iqSWtFxOpk5Wgjfig70SGfqEixDZnc17DuQC7EARslI-DLlY49ZhBILrQUqE&usqp=CAU" alt="Monitoreo"></td>
+            <td class="image-container">Recompensar participación <img src="https://ak.picdn.net/contributors/498865/avatars/thumb.jpg?t=5763322" alt="Reconocimiento"></td>
+        </tr>
+    </table>
+
+    <footer>Todos los derechos reservados a Tadeo Alberto y Jamileth Ramos de 3B de PROGRAMACIÓN</footer>
+
+    <script>
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
